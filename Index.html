@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>YourParts — New Auto Parts Worldwide</title>
+  <style>
+    body{font-family:Inter,Segoe UI,Arial;line-height:1.5;margin:0;color:#222}
+    header{background:#0b63b8;color:#fff;padding:28px 20px}
+    .container{max-width:1100px;margin:0 auto;padding:20px}
+    .hero{display:flex;gap:20px;align-items:center;justify-content:space-between}
+    .hero h1{margin:0;font-size:28px}
+    .btn{display:inline-block;padding:12px 18px;border-radius:8px;text-decoration:none;font-weight:600}
+    .btn-primary{background:#ff7a00;color:#fff}
+    .btn-wh{background:#25D366;color:#fff}
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;margin-top:20px}
+    .card{border:1px solid #eee;padding:14px;border-radius:8px;background:#fff}
+    .search-vin{display:flex;gap:8px;margin-top:12px}
+    input[type="text"]{flex:1;padding:10px;border-radius:8px;border:1px solid #ccc}
+    footer{background:#f6f7fa;padding:20px;margin-top:30px}
+    nav .brands{display:flex;flex-wrap:wrap;gap:8px}
+    .brand-pill{background:#eef6ff;padding:8px 10px;border-radius:6px;border:1px solid #d7e9ff}
+    @media(max-width:700px){.hero{flex-direction:column;align-items:flex-start}}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container hero">
+      <div>
+        <h1>New Original Auto Parts — Toyota • Nissan • Lexus • Infiniti • Hyundai • Kia • Mitsubishi</h1>
+        <p>Worldwide shipping • VIN lookup • Fast WhatsApp support</p>
+      </div>
+      <div style="text-align:right">
+        <a class="btn btn-primary" href="#catalog">Shop Parts</a>
+        <a class="btn btn-wh" id="whLink" href="https://wa.me/00000000000?text=Hello%20I%20want%20to%20order">WhatsApp</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <section id="vin">
+      <h2>Find parts by VIN</h2>
+      <p>Enter VIN and click "Send to WhatsApp" — we'll check compatibility and reply quickly.</p>
+      <div class="search-vin">
+        <input id="vinInput" type="text" placeholder="Enter VIN (e.g. JTMZK33V012345678)" />
+        <a class="btn btn-wh" id="sendVin">Send to WhatsApp</a>
+      </div>
+    </section>
+
+    <section id="categories" style="margin-top:28px">
+      <h2>Categories</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>Engine Parts</h3>
+          <ul>
+            <li>Starters & Alternators</li>
+            <li>Sensors & Actuators</li>
+            <li>Turbochargers & Radiators</li>
+            <li>Pistons & Gaskets</li>
+          </ul>
+          <a href="#catalog" class="btn">View Engine Parts</a>
+        </div>
+        <div class="card">
+          <h3>Suspension & Steering</h3>
+          <ul>
+            <li>Shock absorbers & Struts</li>
+            <li>Control arms & Bushings</li>
+            <li>Ball joints & Linkages</li>
+          </ul>
+          <a href="#catalog" class="btn">View Suspension</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="brands" style="margin-top:28px">
+      <h2>Brands</h2>
+      <nav class="brands">
+        <span class="brand-pill">Toyota</span>
+        <span class="brand-pill">Nissan</span>
+        <span class="brand-pill">Lexus</span>
+        <span class="brand-pill">Infiniti</span>
+        <span class="brand-pill">Hyundai</span>
+        <span class="brand-pill">Kia</span>
+        <span class="brand-pill">Mitsubishi</span>
+      </nav>
+    </section>
+
+    <section id="catalog" style="margin-top:28px">
+      <h2>Sample parts (first 6)</h2>
+      <div class="grid">
+        <div class="card">
+          <img src="" alt="part" style="width:100%;height:120px;background:#f0f0f0;border-radius:6px" />
+          <h4>Front Shock Absorber — Toyota Camry (new)</h4>
+          <p>OEM: 48510-#####</p>
+          <strong>Price: $120</strong>
+          <div style="margin-top:8px">
+            <a class="btn btn-wh" href="https://wa.me/00000000000?text=I%20want%20to%20order%20Front%20Shock%20Absorber%20Toyota%20Camry">Order via WhatsApp</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="" alt="part" style="width:100%;height:120px;background:#f0f0f0;border-radius:6px" />
+          <h4>Starter Motor — Nissan Altima</h4>
+          <p>OEM: 23300-#####</p>
+          <strong>Price: $85</strong>
+          <div style="margin-top:8px">
+            <a class="btn btn-wh" href="https://wa.me/00000000000?text=I%20want%20to%20order%20Starter%20Motor%20Nissan%20Altima">Order via WhatsApp</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="" alt="part" style="width:100%;height:120px;background:#f0f0f0;border-radius:6px" />
+          <h4>Oil Pump — Lexus RX</h4>
+          <p>OEM: 15100-#####</p>
+          <strong>Price: $210</strong>
+          <div style="margin-top:8px">
+            <a class="btn btn-wh" href="https://wa.me/00000000000?text=I%20want%20to%20order%20Oil%20Pump%20Lexus%20RX">Order via WhatsApp</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div style="display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px">
+        <div>
+          <h4>YourParts</h4>
+          <p>New original auto parts • Worldwide shipping</p>
+        </div>
+        <div>
+          <p><strong>WhatsApp:</strong> <span id="phone">+00000000000</span></p>
+          <p><strong>Email:</strong> info@yourstore.com</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Replace this phone number with your real WhatsApp number in international format (no +, only digits), e.g. 994501234567
+    const WH_NUMBER = "00000000000";
+    document.getElementById('whLink').href = `https://wa.me/${WH_NUMBER}?text=Hello%20I%20want%20to%20order`;
+    document.querySelectorAll('a[href*="wa.me"]').forEach(a=>{
+      a.href = a.href.replace("00000000000", WH_NUMBER);
+    });
+    document.getElementById('phone').innerText = "+" + WH_NUMBER;
+
+    document.getElementById('sendVin').addEventListener('click', ()=>{
+      const vin = document.getElementById('vinInput').value.trim();
+      if(!vin){ alert('Please enter VIN'); return; }
+      const text = encodeURIComponent(`Здравствуйте! Хочу подобрать новые запчасти по VIN: ${vin}`);
+      window.open(`https://wa.me/${WH_NUMBER}?text=${text}`, '_blank');
+    });
+  </script>
+</body>
+</html>
