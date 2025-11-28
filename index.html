@@ -172,20 +172,20 @@
   </footer>
 
   <script>
-    // Replace this phone number with your real WhatsApp number in international format (no +, only digits), e.g. 994501234567
-    const WH_NUMBER = "994556574157";
-    document.getElementById('whLink').href = `https://wa.me/${WH_NUMBER}?text=Hello%20I%20want%20to%20order`;
-    document.querySelectorAll('a[href*="wa.me"]').forEach(a=>{
-      a.href = a.href.replace("994556574157", WH_NUMBER);
-    });
-    document.getElementById('phone').innerText = "+" + WH_NUMBER;
+const WH_NUMBER = "994556574157";
 
-    document.getElementById('sendVin').addEventListener('click', ()=>{
-      const vin = document.getElementById('vinInput').value.trim();
-      if(!vin){ alert('Please enter VIN'); return; }
-      const text = encodeURIComponent(`Здравствуйте! Хочу подобрать новые запчасти по VIN: ${vin}`);
-      window.open(`https://wa.me/${WH_NUMBER}?text=${text}`, '_blank');
-    });
-  </script>
+// Обработчик VIN-кнопки
+document.getElementById('sendVin').addEventListener('click', ()=>{
+    const vin = document.getElementById('vinInput').value.trim();
+    if(!vin){
+        alert('Пожалуйста, введите VIN');
+        return;
+    }
+
+    const text = encodeURIComponent(`Здравствуйте! Хочу подобрать новые запчасти по VIN: ${vin}`);
+    const url = `https://wa.me/${WH_NUMBER}?text=${text}`;
+    window.open(url, '_blank');
+});
+</script>
 </body>
 </html>
